@@ -70,6 +70,47 @@ Currently, I'm focused on full stack development and AI, with the goal of creati
   <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-bouhabs-15bbb2362/" target="_blank" rel="noopener noreferrer">Ahmed Bouhabs</a></p>
   <p>GitHub: <a href="https://github.com/RAaz00r" target="_blank" rel="noopener noreferrer">RAaz00r</a></p>
 </section>
+<!-- EASTER EGG -->
 
+<img src="Untitled31_20260417160822.png" alt="cat on watermelon" class="watermelon-cat" id="cat-easter">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<audio id="cat-music" src="El Jarabe Tapatio-The Mexican Hat Dance.mp3"></audio>
+
+<script>
+const cat = document.getElementById("cat-easter");
+const music = document.getElementById("cat-music");
+
+cat.addEventListener("click", () => {
+
+
+  cat.classList.add("active");
+
+
+  confetti({
+    particleCount: 200,
+    spread: 100,
+    origin: { y: 0.5 }
+  });
+
+
+  music.currentTime = 0;
+  music.play();
+
+ 
+  setTimeout(() => {
+    cat.style.opacity = "0";
+  }, 600);
+
+
+  setTimeout(() => {
+    cat.classList.remove("active");
+    cat.style.opacity = "0.6";
+  }, 1200);
+
+});
+</script>
+<!-- end of EASTER EGG -->
 </body>
 </html>
